@@ -1,0 +1,130 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 85vw;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-logo {
+    width: 180px;
+    margin-bottom: 24px;
+}
+
+.login-header h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #ff4e4e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 78, 78, 0.1);
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ff4e4e;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 12px;
+}
+
+.login-button:hover {
+    background: #ff3535;
+}
+
+.login-button:disabled {
+    background: #ffcece;
+    cursor: not-allowed;
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.login-footer {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.login-footer p {
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 24px;
+    }
+
+    .login-logo {
+        width: 140px;
+    }
+}

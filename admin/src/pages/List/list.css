@@ -1,0 +1,141 @@
+.foods-table-container {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #eaeaea;
+    overflow: auto;
+}
+
+.foods-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.foods-table th {
+    background: #f8f9fa;
+    padding: 16px;
+    text-align: left;
+    font-weight: 500;
+    color: #666;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.foods-table td {
+    padding: 16px;
+    border-bottom: 1px solid #eaeaea;
+    color: #2c3e50;
+}
+
+.foods-table tr:last-child td {
+    border-bottom: none;
+}
+
+.foods-table tr:hover {
+    background: #f8f9fa;
+}
+
+.food-cell {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.food-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.food-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.food-name {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.food-type {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+.food-type.veg {
+    background: #e3fcef;
+    color: #00a650;
+}
+
+.food-type.non-veg {
+    background: #ffe5e5;
+    color: #ff4e4e;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background: #e3fcef;
+    color: #00a650;
+}
+
+.status-badge.inactive {
+    background: #f1f1f1;
+    color: #666;
+}
+
+.edit-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #fff0ed;
+    color: #ff4e4e;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+    background: #ff4e4e;
+    color: white;
+}
+
+.edit-icon {
+    width: 16px;
+    height: 16px;
+}
+
+tr.inactive {
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .foods-table-container {
+        margin: 0 -16px;
+        border-radius: 0;
+    }
+
+    .foods-table th,
+    .foods-table td {
+        padding: 12px;
+    }
+
+    .food-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .edit-button {
+        padding: 6px 12px;
+    }
+}

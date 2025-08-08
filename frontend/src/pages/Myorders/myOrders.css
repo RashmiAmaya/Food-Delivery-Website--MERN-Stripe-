@@ -1,0 +1,132 @@
+.my-orders {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+}
+
+.my-orders h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.my-orders h2:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: #ff4e4e;
+    mask: url("../../assets/parcel_icon.png") center/contain;
+    -webkit-mask: url("../../assets/parcel_icon.png") center/contain;
+}
+
+.my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.my-orders-order {
+    display: grid;
+    grid-template-columns: auto 2fr 1fr 1fr 1fr 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.my-orders-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.my-orders-order img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.my-orders-order p {
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.my-orders-order .status-dot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+}
+
+.my-orders-order .status-dot span {
+    color: #ff4e4e;
+}
+
+.my-orders-order .payment-status {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.my-orders-order button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4e4e;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.my-orders-order button:hover {
+    background: #ff3535;
+}
+
+.my-order-signout {
+    text-align: center;
+    padding: 48px 24px;
+    margin: 48px auto;
+    max-width: 400px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.my-order-signout img {
+    width: 200px;
+    margin-bottom: 24px;
+}
+
+.my-order-signout p {
+    color: #666;
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    .my-orders-order {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .my-orders-order img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .my-orders {
+        padding: 16px;
+    }
+
+    .my-orders h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+}

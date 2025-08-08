@@ -1,0 +1,299 @@
+.food-display {
+    margin-top: 30px;
+    padding: 20px 0;
+    perspective: 1000px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.sort-container {
+    position: relative;
+    min-width: 200px;
+}
+
+.sort-container select {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sort-container::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+
+.sort-container:hover::after {
+    border-color: #ff4d4d;
+}
+
+.sort-container select:hover {
+    border-color: #ff4d4d;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.veg-switch {
+    display: flex;
+    align-items: center;
+}
+
+.veg-switch label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    user-select: none;
+}
+
+.veg-switch input[type="checkbox"] {
+    appearance: none;
+    width: 42px;
+    height: 22px;
+    background: #eee;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.veg-switch input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.veg-switch input[type="checkbox"]:checked {
+    background: #ff4d4d;
+}
+
+.veg-switch input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+}
+
+.veg-switch input[type="checkbox"]:hover {
+    opacity: 0.9;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px 0;
+    will-change: transform;
+}
+
+/* Add these new styles */
+.food-display-list > div {
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 70px 0;
+}
+.location h6{
+    font-size: 50px;
+    opacity: 0.3;
+}
+.location .error{
+    font-size: 20px;
+}
+.location-error{
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+}
+.location .sol{
+    width: 50%;
+    text-align: center;
+   
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    border: 2px solid #eee;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    min-width: 40px;
+}
+
+.pagination button:hover {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+}
+
+.pagination button.active {
+    background: #ff4d4d;
+    border-color: #ff4d4d;
+    color: white;
+}
+
+/* Styles for no-items */
+.no-items {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px; 
+}
+
+.no-items .emoji {
+    font-size: 24px; 
+    margin-left: 8px;
+}
+
+/* Large screens */
+@media (max-width: 1400px) {
+    .food-display-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Medium-large screens */
+@media (max-width: 1200px) {
+    .food-display-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+    .food-display-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .food-display-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .controls {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .sort-container {
+        width: auto;
+        min-width: 180px;
+        flex: 1;
+    }
+
+    .sort-container select {
+        width: 100%;
+        padding: 8px 35px 8px 12px;
+        font-size: 13px;
+    }
+
+    .veg-switch label {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .food-display-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .food-display h2 {
+        font-size: 20px;
+    }
+
+    .controls {
+        justify-content: space-between;
+    }
+    
+    .sort-container {
+        min-width: 160px;
+    }
+
+    .pagination button {
+        padding: 6px 12px;
+        font-size: 13px;
+        min-width: 35px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .food-display-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .location .sol{
+        width: 100%;
+        text-align: left;
+    }
+    
+    .location-error{
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+}

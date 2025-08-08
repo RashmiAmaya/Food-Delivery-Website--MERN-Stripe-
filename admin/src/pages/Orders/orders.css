@@ -1,0 +1,281 @@
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.order-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+}
+
+.order-header {
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.order-icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: #fff0ed;
+    color: #ff4e4e;
+    border-radius: 8px;
+}
+
+.order-title h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.order-status {
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.order-status.food-processing {
+    background: #fff0ed;
+    color: #ff4e4e;
+}
+
+.order-status.out-for-delivery {
+    background: #e5f6ff;
+    color: #0095ff;
+}
+
+.order-status.delivered {
+    background: #e3fcef;
+    color: #00a650;
+}
+
+.status-select {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    background: white;
+    color: #2c3e50;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.status-select:hover {
+    border-color: #ff4e4e;
+}
+
+.order-details {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 32px;
+}
+
+.order-items h4,
+.customer-details h4 {
+    margin: 0 0 12px 0;
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+.order-items p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.customer-name {
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+}
+
+.customer-address {
+    color: #666;
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+
+.customer-phone {
+    color: #666;
+    margin: 0;
+}
+
+.order-summary {
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+}
+
+.summary-item.total {
+    padding-top: 12px;
+    border-top: 1px solid #eaeaea;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.payment-status {
+    font-size: 13px;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.payment-status.cod {
+    background: #fff0ed;
+    color: #ff4e4e;
+}
+
+.payment-status.paid {
+    background: #e3fcef;
+    color: #00a650;
+}
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.status-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.status-filter:hover {
+    border-color: #ff4e4e;
+}
+
+.filter-icon {
+    width: 20px;
+    height: 20px;
+    color: #666;
+}
+
+.filter-select {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #2c3e50;
+    background: transparent;
+    cursor: pointer;
+    min-width: 200px;
+    padding-right: 24px;
+}
+
+.filter-select option {
+    padding: 8px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 8px 16px;
+    min-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    border-color: #ff4e4e;
+    box-shadow: 0 0 0 2px rgba(255, 78, 78, 0.1);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    color: #2c3e50;
+    background: transparent;
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    color: #999;
+}
+
+@media (max-width: 1024px) {
+    .order-details {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .status-select {
+        width: 100%;
+    }
+
+    .order-details {
+        padding: 16px;
+    }
+
+    .users-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .status-filter {
+        width: 100%;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .search-bar,
+    .status-filter {
+        width: 100%;
+    }
+}
